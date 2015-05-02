@@ -42,14 +42,14 @@ public class ClickToMove : MonoBehaviour {
     }
 
     void moveToPosition() {
-        Quaternion newRotation = Quaternion.LookRotation(position - transform.position, Vector3.forward);
-        newRotation.x = 0;
-        newRotation.y = 0;
-
         if (transform.position != position) {
+            Quaternion newRotation = Quaternion.LookRotation(position - transform.position, Vector3.forward);
+            newRotation.x = 0;
+            newRotation.y = 0;
             transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * 10);
         }
-
+        
         transform.position = Vector3.MoveTowards(transform.position, position, Time.deltaTime * speed);
+
     }
 }

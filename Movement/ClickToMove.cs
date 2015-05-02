@@ -26,10 +26,8 @@ public class ClickToMove : MonoBehaviour {
         if (Input.GetMouseButton(0) && GUIUtility.hotControl == 0) {
             locatePosition();
         }
+        moveToPosition();
 
-        if (position != null) {
-            moveToPosition();
-        }
     }
 
     void locatePosition() {

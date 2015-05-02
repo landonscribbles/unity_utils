@@ -106,6 +106,8 @@ public class TestTileManager : MonoBehaviour {
             // Attempted to do this OnBecameInvisble and null checking but it was acting weird
             Vector3 tilePos = testTiles[i].transform.position;
             if (tilePos.x < bottomLeftXPos || tilePos.x > bottomRightXPos || tilePos.y < bottomLeftYPos || tilePos.y > topLeftYPos) {
+                GameObject killTile = testTiles[i];
+                Destroy(killTile);
                 testTiles.RemoveAt(i);
                 continue;
             }

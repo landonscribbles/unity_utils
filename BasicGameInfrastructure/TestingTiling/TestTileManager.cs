@@ -33,7 +33,6 @@ public class TestTileManager : MonoBehaviour {
 
     private Vector3 topLeftScreenPos;
     private Vector3 bottomLeftScreenPos;
-    private Vector3 topRightScreenPos;
     private Vector3 bottomRightScreenPos;
 
     private List<GameObject> testTiles = new List<GameObject>();
@@ -68,9 +67,6 @@ public class TestTileManager : MonoBehaviour {
 
         Vector3 topLeftCheck = new Vector3(0, 1, zDist);
         topLeftScreenPos = Camera.main.ViewportToWorldPoint(topLeftCheck);
-
-        Vector3 topRightCheck = new Vector3(1, 1, zDist);
-        topRightScreenPos = Camera.main.ViewportToWorldPoint(topRightCheck);
     }
 
     List<int> BuildRange(int minVal, int maxVal) {
